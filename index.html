@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<style>
+			body {
+				margin : 0px auto;
+			}
+			.container  div{
+				display: inline-block;
+				margin: 0px auto;
+			}
+			#left {
+				width : 33%;
+				height : 100%;
+				background-color: #7DB9E8;
+				margin: 0px auto;
+			}
+			#center {
+				width : 33%;
+				height : 100%;
+				background-color: #E3F4FC;	
+			}
+
+
+
+			#right {
+				right : 0px;
+
+				width : 33%;
+				height : 100%;
+				/*display : table-column;*/
+				background-color: #7DB9E8;
+			}
+			#code{
+				background-color: white;
+				margin: 0px auto;
+				/*display: block;*/
+				width: 90%;
+				height : 80%;
+				/*margin-left: 5%;*/
+				/*height: 80%;*/
+			}
+
+			#preview {
+				height : 80%;
+				width : 80%;
+			}
+
+		</style>
+	</head>
+	<body>
+		<script>
+		</script>
+		<div class="container" id="container">
+			<div id="left">Here U Have Drag&Drop</div>
+			<div id="center">
+				<iframe name="preview" id="preview">
+				</iframe>
+
+			</div>
+			<div id="right">
+				<button id="magic">MAGIC HERE</button>
+				
+
+				<!-- <form > -->
+					
+						<textarea  type="text" id="code" name="code">
+						</textarea> 
+					
+				<!-- </form> -->
+
+			</div>
+		</div>
+	</body>
+</html>
