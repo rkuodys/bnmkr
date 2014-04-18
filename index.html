@@ -49,6 +49,13 @@
 	</head>
 	<body>
 		<script>
+			function send(){
+				console.log('dfasdfa')
+					var text = document.getElementById("code").value;
+
+				document.getElementById('preview').innerHtml = text;
+
+			}
 		</script>
 		<div class="container" id="container">
 			<div id="left">Here U Have Drag&Drop</div>
@@ -58,15 +65,11 @@
 
 			</div>
 			<div id="right">
-				<button id="magic">MAGIC HERE</button>
+				<button id="magic" onclick="send">MAGIC HERE</button>
 				
-
-				<!-- <form > -->
-					
 						<textarea  type="text" id="code" name="code">
 						</textarea> 
-					
-				<!-- </form> -->
+
 
 			</div>
 		</div>
