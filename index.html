@@ -48,13 +48,16 @@
 		</style>
 	</head>
 	<body>
-		<script>
-			function send(){
-				console.log('dfasdfa')
-					var text = document.getElementById("code").value;
-
-				document.getElementById('preview').innerHtml = text;
-
+		<script>		
+			function sendToPreview(){
+				var preview = frames['preview'];
+				var previewIframe = preview.frameElement;
+				var code = document.getElementById("code").value;
+			
+				previewIframe.src = "about:blank";		// clear iframe content
+				previewIframe.onload = function () {	// when cleared, write code
+					preview.document.write(code);
+				}			
 			}
 		</script>
 		<div class="container" id="container">
@@ -65,7 +68,7 @@
 
 			</div>
 			<div id="right">
-				<button id="magic" onclick="send">MAGIC HERE</button>
+				<button id="magic" onclick="sendToPreview()">MAGIC HERE</button>
 				
 						<textarea  type="text" id="code" name="code">
 						</textarea> 
