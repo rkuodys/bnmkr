@@ -50,13 +50,12 @@
 	<body>
 		<script>		
 			function sendToPreview(){
-				var preview = frames['preview'];
-				var previewIframe = preview.frameElement;
+				var preview = document.getElementById('preview');
 				var code = document.getElementById("code").value;
 			
-				previewIframe.src = "about:blank";		// clear iframe content
-				previewIframe.onload = function () {	// when cleared, write code
-					preview.document.write(code);
+				preview.src = "about:blank";		// clear iframe content
+				preview.onload = function () {		// when cleared, write code
+					preview.contentDocument.write(code);
 				}			
 			}
 		</script>
@@ -72,7 +71,6 @@
 				
 						<textarea  type="text" id="code" name="code">
 						</textarea> 
-
 
 			</div>
 		</div>
